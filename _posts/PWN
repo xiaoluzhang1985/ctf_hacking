@@ -2,7 +2,9 @@
 layout: default
 title: PWN in CTF
 ---
-
+<html>
+<title>PWN in CTF</title>
+<body>
 0x0 Instruction
   PWN in CTF are mostly based on exploring and utilize buffer overflow weaknesses. In order to Pwn the question the well known of stack overflow, stack protection techniques and shellcode are needed.
 
@@ -31,3 +33,5 @@ title: PWN in CTF
   [2]http://www.jianshu.com/p/a659924515f7
   [3]https://sploitfun.wordpress.com/2015/
   
+</body>
+</html>
