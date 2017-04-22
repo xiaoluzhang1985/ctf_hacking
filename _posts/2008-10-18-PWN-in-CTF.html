@@ -1,0 +1,37 @@
+---
+layout: default
+title: PWN in CTF
+---
+
+<h2>{{ PWN in CTF }}</h2>
+<p>
+0x0 Instruction
+  PWN in CTF are mostly based on exploring and utilize buffer overflow weaknesses. In order to Pwn the question the well known of stack overflow, stack protection techniques and shellcode are needed.
+
+0X1 Stack overflow
+	Performing the stack overflow attack needs hackers having the deep understanding of the target program, which basicly relys on their reverse engineering techniques. Therefore, it is also platform-related. Different oprating system / CPU architectures requires different RE solution.
+  Otherwise the article[0] below had a very well explaination for x86_64bit Linux buffer overflow.
+
+0x2 DEP ALSR
+	DEP and ALSR are both stack portection techniques.
+	If DEP is on, no instructions can be executed in the program's stack. Note that DEP is set by gcc.
+    ---switch off stack protection---"gcc -fno-stack-protector -z execstack ".
+	If ALSR is on every time executing the program, it will be loaded to different memory address. Note that ALSR is set by the OS. 
+    ---Check ALSR---"cat /proc/sys/kernel/randomize_va_space"
+    ---Switch off ALSR---"sudo echo 0 > /proc/sys/kernel/randomize_va_space"
+
+0x3 Common procedure
+	0x20 Detect packer (Usually UPX in Linux)
+	0x21 checksec.sh DEP and ALSR
+	0x22 Assembly code Analysis (stack structure)
+	0x23 Find overflow spot
+	0x24 Write shellcode
+
+0x4 Reference
+  [0]https://www.exploit-db.com/docs/33698.pdf
+  [1]http://blog.csdn.net/caterpillarous/article/details/51177527
+  [2]http://www.jianshu.com/p/a659924515f7
+  [3]https://sploitfun.wordpress.com/2015/
+
+</p>
+<p>{{ page.date | date_to_string }}</p>
