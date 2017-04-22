@@ -34,3 +34,4 @@ title: PWN in CTF
   [3]https://sploitfun.wordpress.com/2015/
 
 </p>
+<p>{{ page.date | date_to_string }}</p>
