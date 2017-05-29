@@ -4,6 +4,19 @@ title: Stack Protection Techniques
 ---
 
 <h2>{{ page.title }}</h2>
+0x0
+---
+Example of checksec script
+```
+root@kali:~/Documents/_rop# checksec level2
+[!] Pwntools does not support 32-bit Python.  Use a 64-bit release.
+[*] '/root/Documents/_rop/level2'
+    Arch:     i386-32-little
+    RELRO:    Partial RELRO
+    Stack:    No canary found
+    NX:       NX enabled
+    PIE:      No PIE (0x8048000)
+```
 
 
 0x1 DEP / NX (No-eXecute)
