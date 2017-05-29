@@ -4,6 +4,7 @@ title: Stack Protection Techniques
 ---
 
 <h2>{{ page.title }}</h2>
+
 0x0 checksec
 ---
 
