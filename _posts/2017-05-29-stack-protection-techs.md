@@ -4,9 +4,9 @@ title: Stack Protection Techniques
 ---
 
 <h2>{{ page.title }}</h2>
-0x0
+0x0 checksec
 ---
-Example of checksec script
+
 ```
 root@kali:~/Documents/_rop# checksec level2
 [!] Pwntools does not support 32-bit Python.  Use a 64-bit release.
