@@ -72,5 +72,9 @@ $ gcc -fstack-protector-strong helloworld.c
 
 Terminator canaries, Random canaries, Random XOR canaries.
 
+0x5 FORTIFY_SOURCE
+---
+Since the compiler can know the size of a buffer with a known buffer size, functions that operate on the buffer can make sure the buffer will not overflow. Basicly "FORTIFY_SOURCE" would add instructions (optimization) to detect if the length of the buffer.
+
 
 
